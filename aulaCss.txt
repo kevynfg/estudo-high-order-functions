@@ -1,0 +1,50 @@
+H1 P -> Seleciona qualquer elemento que seja descendente(filho, neto etc.) de um elemento h1
+H1 > P -> qualquer elemento P que seja filho de um elemento h1
+
+exemplo para ambos:
+    <h1>
+        <p></p>
+    </h1>
+
+
+
+h1 + P - > qualquer elemento P que seja o próximo irmão de um elemento (ou seja, o próximo filho de um mesmo pai)
+
+exemplo: <h1></h1>
+         <p></p>
+
+para trazer um estilo css numa página HTML, pode-se utilizar a seguinte forma
+
+<head>
+    <style type="text/css">
+        @import url("estilo.css");
+    </style>
+</head>
+        
+Ordem de precedência css: Seletor de elemento > seletor de classe > seletor de id (maior precedência)
+
+declaração de font com font-face
+@font-face {
+    font-family: 'Awesome';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Awesome Font')
+        url('/assets/fontes/awesome.wof2') format('woff2'),
+        url('//siteondeafonteestadisponivel/fonts/awesome.woff') format ('woff'),
+        url('//assets/fontes/awesome.ttf') format('truetype'),
+        url('//outrositeondeafonteestadisponivel/fontes/awesome.eot') format ('embedded-opentype');
+}
+local: indica que o navegador deve fazer o download antes de utilizar a fonte
+format: Também chamada de dica, essa função opcional é utilizada quando se deseja declarar vários formatos de fontes, indicando justamente o formato de cada uma. No exemplo acima, temos os formatos “woff”, “woff2”, “ttf” e “eot”.
+
+p{
+    background-color: #0000;
+    background-image: url(imagem.jpg);
+    background-repeat: no-repeat;
+    background-positino: top left;
+}
+
+p{
+    background: #0000 url(imagem.jpg) no-repeat top left;
+}
+

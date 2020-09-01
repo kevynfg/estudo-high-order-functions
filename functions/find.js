@@ -1,4 +1,4 @@
-const { passengers } = require('./data.js');
+const { passengers } = require('../data.js');
 
 //IMUTABILIDADE
 //Encontrar passageiro com nome Enzo

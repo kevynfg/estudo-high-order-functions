@@ -1,4 +1,4 @@
-const { passengers } = require('./data.js');
+const { passengers } = require('../data.js');
 
 //Não é imutável
 //Não retorna novo objeto

@@ -1,4 +1,4 @@
-const { shopCart } = require('./data');
+const { shopCart } = require('../data');
 //Reduzir um objeto a um valor único e retorna o que eu quiser
 //IMUTABILIDADE
 

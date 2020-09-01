@@ -1,4 +1,4 @@
-const { shopCart, passengers } = require('./data');
+const { shopCart, passengers } = require('../data');
 
 //ordenar elementos
 //ordenação segue a regra do unicode ASCII

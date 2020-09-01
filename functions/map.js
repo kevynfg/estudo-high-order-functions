@@ -1,4 +1,4 @@
-const {passengers} = require('./data.js');
+const {passengers} = require('../data.js');
 
 //IMUTABILIDADE
 //retorna novo objeto respeitando o tamanho do objeto original
@@ -21,7 +21,7 @@ const founds = passengers.map(passenger => {
    const reverseName = [].map.call(passenger.name, letter => letter)
    .reverse()
    .join('')
-
+    console.log(reverseName)
    if (reverseName.toLowerCase() === passenger.name.toLowerCase()) return `This is a palindrome: ${passenger.name}`;
 });
 

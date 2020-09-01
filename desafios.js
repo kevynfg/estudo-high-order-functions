@@ -53,11 +53,13 @@ console.log(MaiorDosMenores);
 const Abaixo100 = shopCart
 .filter(product => product.unitPrice <= 100)
 .reduce ((lastProduct, currentProduct) => {
+    
     //Verifica se o produto atual é menor que o ultimo produto verificado
     //e vai substituindo um pelo outro que for maior
     if (lastProduct.unitPrice > currentProduct.unitPrice) return lastProduct;
-    
     //Retorna o produto atual que é maior
     return currentProduct;
 },
 { unitPrice: 0 }) //defino que quero que no final me retorne um objeto chamado UniPrice que começa com valor 0
+
+console.log(Abaixo100);
