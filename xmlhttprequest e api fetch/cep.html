@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHttpRequest</title>
+  </head>
+  <body>
+    <h1>Consulta de CEP</h1>
+    <p>A partir do click no botão abaixo uma consulta de cep será realizada</p>
+    <input id="cep" name="cep" type="text" />
+    <br />
+    <button onclick="carregarCep()">Carregar Cep</button>
+    <br />
+    <p id="resultado"></p>
+  </body>
+  <script type="text/javascript">
+    function carregarCep() {
+      var cep = document.getElementById('cep').value;
+      var xmlHttpRequest = new XMLHttpRequest();
+
+      var url = 'https://cep.la/' + cep;
+      console.log(cep);
+      xmlHttpRequest.open('GET', url, true);
+      xmlHttpRequest.setRequestHeader('Accept', 'application/json');
+
+      xmlHttpRequest.onreadystatechange = function () {
+        if (xmlHttpRequest.readyState == 3) {
+          console.log('Carregando o conteúdo');
+        }
+        if (xmlHttpRequest.readyState == 4) {
+          console.log('CEP: ' + xmlHttpRequest.responseText);
+          var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+          document.getElementById('resultado').innerHTML =
+            'CEP: ' +
+            jsonResponse.cep +
+            '<br />' +
+            'UF: ' +
+            jsonResponse.uf +
+            '<br />' +
+            'Cidade: ' +
+            jsonResponse.cidade +
+            '<br />' +
+            'Bairro: ' +
+            jsonResponse.bairro +
+            '<br />' +
+            'Logradouro: ' +
+            jsonResponse.logradouro;
+          console.log(jsonResponse);
+        }
+      };
+    }
+  </script>
+</html>

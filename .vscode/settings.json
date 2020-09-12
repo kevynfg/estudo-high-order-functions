@@ -21,5 +21,6 @@
             "server": "localhost",
             "username": "postgres"
         }
-    ]
+    ],
+    "editor.formatOnSave": true
 }

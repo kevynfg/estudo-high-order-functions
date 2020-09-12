@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHttpRequest</title>
+  </head>
+  <body>
+    <h1>Imagens Aleatórias de Cachorros</h1>
+    <p>
+      A partir do click no botão abaixo uma nova imagem aleatória vai ser gerada
+    </p>
+
+    <img
+      id="img_dog"
+      src=""
+      alt="Aguardando a imagem ser carregada"
+      style="max-width: 400px; max-height: 300px"
+    />
+    <br />
+    <button onclick="carregarImagens()">Carregar Imagens</button>
+  </body>
+  <script type="text/javascript">
+    function carregarImagens() {
+      var url = 'https://dog.ceo/api/breeds/image/random';
+
+      fetch(url, {
+        method: 'get',
+      })
+        .then(function (response) {
+          response.json().then(function (data) {
+            console.log('Resultado da requisição: ' + data.message);
+
+            var imgDog = document.getElementById('img_dog');
+            imgDog.src = data.message;
+          });
+        })
+        .catch(function (err) {
+          console.error('O seguinte erro ocorreu durante a requisição: ' + err);
+        });
+    }
+  </script>
+</html>
