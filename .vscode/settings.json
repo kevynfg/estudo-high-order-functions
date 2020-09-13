@@ -1,26 +1,22 @@
 {
-    "python.testing.unittestArgs": [
-        "-v",
-        "-s",
-        ".",
-        "-p",
-        "test*.py"
-    ],
-    "python.testing.pytestEnabled": false,
-    "python.testing.nosetestsEnabled": false,
-    "python.testing.unittestEnabled": true,
-    "python.pythonPath": "D:\\Python\\Python38-32\\python.exe",
-    "sqltools.connections": [
-        {
-            "askForPassword": true,
-            "database": "postgres",
-            "driver": "PostgreSQL",
-            "name": "localhost",
-            "port": 5432,
-            "previewLimit": 50,
-            "server": "localhost",
-            "username": "postgres"
-        }
-    ],
-    "editor.formatOnSave": true
+  "python.testing.unittestArgs": ["-v", "-s", ".", "-p", "test*.py"],
+  "python.testing.pytestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.unittestEnabled": true,
+  "python.pythonPath": "C:\\Users\\Kevyn\\envs\\ambiente_teste\\Scripts\\python.exe",
+  "sqltools.connections": [
+    {
+      "askForPassword": true,
+      "database": "postgres",
+      "driver": "PostgreSQL",
+      "name": "localhost",
+      "port": 5432,
+      "previewLimit": 50,
+      "server": "localhost",
+      "username": "postgres"
+    }
+  ],
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "autopep8",
+  "python.autoComplete.extraPaths": []
 }
