@@ -1,1 +1,1 @@
-# estudo-high-order-functions
+# estudos em geral, material didático
