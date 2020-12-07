@@ -16,7 +16,8 @@ print("Rótulos:\n", rotulos[:2])
 print('########################################################')
 
 # Partição dos dados
-carac_treino, carac_teste, rot_treino, rot_teste = train_test_split(caracteristicas, rotulos)
+carac_treino, carac_teste, rot_treino, rot_teste = train_test_split(
+    caracteristicas, rotulos)
 
 ###################       Mineração        #####################
 
