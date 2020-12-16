@@ -44,7 +44,7 @@ let uniqueNames = numbers.filter(
 //console.log(uniqueNames);
 
 const gameNumbersSorted = [1, 3, 10, 11, 14, 17, 18, 19, 20, 21, 23, 25];
-const LotteryNumbers = [1, 3, 10, 11, 14];
+const LotteryNumbers = [1, 3, 10];
 let pickedNumbers = 10;
 const selectedGameNumbers = [];
 
@@ -53,10 +53,14 @@ var permute = function (nums, set = [], answers = []) {
 
   for (let i = 0; i < nums.length; i++) {
     const newNums = nums.filter((n, index) => index !== i);
+    console.log('new num', newNums);
+    console.log('nums', nums[i]);
     set.push(nums[i]);
     permute(newNums, set, answers);
     set.pop();
+    console.log('set depois', set);
   }
+  console.log('answers', answers);
   return answers;
 };
 
