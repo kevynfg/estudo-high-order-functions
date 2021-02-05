@@ -18,4 +18,5 @@ const Utils = {
   },
 };
 
-Utils.formatCurrency(50000);
+//O truque para formatar um número, é multiplicar por 100 e depois na função, dividir por 100
+Utils.formatCurrency(5 * 100);
