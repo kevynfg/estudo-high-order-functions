@@ -16,6 +16,12 @@ const Utils = {
     });
     console.log(signal + value);
   },
+
+  formatAmount(value) {
+    //Dessa forma ele faz o esquema de multiplicar para depois dividir por 100 e deixar o valor de dinheiros corretamente
+    //o replace é pra tirar 'pontos' e 'virgulas' antes de formatar o valor
+    value = Number(value.replace(/\,\./g, '')) * 100;
+  },
 };
 
 //O truque para formatar um número, é multiplicar por 100 e depois na função, dividir por 100
